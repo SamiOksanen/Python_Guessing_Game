@@ -1,16 +1,14 @@
 from random import randrange
 x = randrange(0, 10)
 
-print("Please guess a number between 0 and 9: ")
-guess = int(input())
+guess = int(input("Please guess a number between 0 and 9: "))
 
 while True:
     if guess != x:
         if guess > x:
-            print("Please guess lower")
+            guess = int(input("Please guess lower: "))
         else:
-            print("Please guess higher")
-        guess = int(input())
+            guess = int(input("Please guess higher: "))
         if guess == x:
             print("Correct!")
             break
